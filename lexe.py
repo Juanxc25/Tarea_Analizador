@@ -75,15 +75,15 @@ def analyze_code():
     analyzer = LexicalAnalyzer()
     tokens = analyzer.analyze(code)
 
-    # Clear the Treeview before displaying new results
+   
     for item in result_tree.get_children():
         result_tree.delete(item)
 
-    # Insert the results into the Treeview
+    
     for token in tokens:
         result_tree.insert("", 'end', values=(token.value, token.type, token.lineno))
 
-# Create the GUI
+
 root = tk.Tk()
 root.title("Lexical Analyzer")
 
